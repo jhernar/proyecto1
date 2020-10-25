@@ -11,5 +11,22 @@ export class ListadoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  users: string[] = ['Daniel Hernandez', 'Jesus Rodriguez', 'Edgar Cantu'];
+
+  deleteUser(user){
+    this.users = this.users.filter(us => user != us)
+  }
+
+  addUser(newUser){
+    this.users.push(newUser.value)
+    newUser.value = '';
+    newUser.focus();
+    return false;
+  }
+
+  mostrar(user){
+    alert(user);
+  }
+
 
 }
