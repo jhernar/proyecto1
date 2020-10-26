@@ -7,6 +7,8 @@ import { ListadoComponent } from './listado/listado.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { HttpClientModule} from '@angular/common/http';
 
+
+
 import { DataService } from './data.service'
 
 @NgModule({

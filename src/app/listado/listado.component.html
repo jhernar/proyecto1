@@ -1,5 +1,5 @@
 
-<body>
+<body >
 
   <h1 align="center">Proyecto</h1>
   <!-- <h3 align="center">Registros</h3> -->
@@ -13,12 +13,15 @@
 
 
   <form (submit)="addUser(newUser)">
-    <input type="text" #newUser>
-    <button>Añadir nombre</button>
+    <div class="form-group">
+      <label for="exnewUser">Nuevo nombre </label><br>
+      <input type="text" id="exnewUser" placeholder="Nombre" #newUser>
+      <button class="btn btn-primary btn-sm">Añadir nombre</button>
+    </div>
   </form>
 
   <h3>
-  Listado de nombres:
+    Listado de nombres:
   </h3>
   <div class="alert alert-primary" role="alert" *ngIf="mostrarAlerta">
     {{Nombre}}
@@ -27,7 +30,7 @@
     </button>
   </div>
   <ul>
-    <li *ngFor= 'let user of users'>
+    <li *ngFor= 'let user of users' class="centr">
      {{user}} <br> <button (click)="deleteUser(user)" class="btn btn-primary btn-sm" > Borrar </button>
      <button (click)="mostrar(user)" class="btn btn-primary btn-sm"> Mostrar </button>
     </li>
