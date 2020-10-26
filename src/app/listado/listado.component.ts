@@ -12,6 +12,8 @@ export class ListadoComponent implements OnInit {
   ngOnInit(): void {
   }
   users: string[] = ['Daniel Hernandez', 'Jesus Rodriguez', 'Edgar Cantu'];
+  Nombre:string ="";
+  mostrarAlerta:boolean=false;
 
   deleteUser(user){
     this.users = this.users.filter(us => user != us)
@@ -25,8 +27,13 @@ export class ListadoComponent implements OnInit {
   }
 
   mostrar(user){
-    alert(user);
+    //alert(user);
+    this.Nombre=user;
+    this.mostrarAlerta = true;
   }
 
+  ocultar(){
+    this.mostrarAlerta = false;
+  }
 
 }

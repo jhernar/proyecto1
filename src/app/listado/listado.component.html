@@ -1,8 +1,16 @@
 
 <body>
 
-  <h1 align="center">Pagina web</h1>
+  <h1 align="center">Proyecto</h1>
   <!-- <h3 align="center">Registros</h3> -->
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#"> Listado </a>
+      <a class="nav-link" href="usuarios"> Usuarios </a>
+    </li>
+  </ul>
+
 
   <form (submit)="addUser(newUser)">
     <input type="text" #newUser>
@@ -12,6 +20,12 @@
   <h3>
   Listado de nombres:
   </h3>
+  <div class="alert alert-primary" role="alert" *ngIf="mostrarAlerta">
+    {{Nombre}}
+    <button type="button" (click)="ocultar()" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
   <ul>
     <li *ngFor= 'let user of users'>
      {{user}} <br> <button (click)="deleteUser(user)" class="btn btn-primary btn-sm" > Borrar </button>

@@ -1,9 +1,19 @@
 
+<body>
+  <h1 align="center">Proyecto</h1>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#"> Usuarios </a>
+    <a class="nav-link" href="listado"> Listado </a>
+  </li>
+</ul>
+
 <div *ngFor="let post of posts">
-  <p>{{post.id}}
+  <p *ngIf="(post.id != 3) || (post.id != 5 && post.name == 'Monterrey')" >{{post.id}}
     {{post.name}}
     {{post.email}}
     {{post.phone}}
-    {{post.city}}
+    {{post.address.city}}
   </p>
 </div>
+</body>
