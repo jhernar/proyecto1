@@ -1,16 +1,12 @@
 
-<body >
-
   <h1 align="center">Proyecto</h1>
   <!-- <h3 align="center">Registros</h3> -->
-
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active" href="#"> Listado </a>
-      <a class="nav-link" href="usuarios"> Usuarios </a>
-    </li>
-  </ul>
-
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#"> Listado </a>
+        <a class="nav-link" href="usuarios"> Usuarios </a>
+      </li>
+    </ul>
 
   <form (submit)="addUser(newUser)">
     <div class="form-group">
@@ -35,8 +31,5 @@
      <button (click)="mostrar(user)" class="btn btn-primary btn-sm"> Mostrar </button>
     </li>
   </ul>
-
-
-</body>
 <!-- <app-usuario *ngFor='let user of users' [nameUser] = user> </app-usuario> -->
 

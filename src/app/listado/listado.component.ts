@@ -12,7 +12,7 @@ export class ListadoComponent implements OnInit {
   ngOnInit(): void {
   }
   users: string[] = ['Daniel Hernandez', 'Jesus Rodriguez', 'Edgar Cantu'];
-  Nombre:string ="";
+  Nombre:string =" ";
   mostrarAlerta:boolean=false;
 
   deleteUser(user){

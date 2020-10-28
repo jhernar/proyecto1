@@ -1,5 +1,4 @@
 
-<body>
   <h1 align="center">Proyecto</h1>
   <ul class="nav nav-tabs">
     <li class="nav-item">
@@ -7,7 +6,7 @@
       <a class="nav-link" href="listado"> Listado </a>
     </li>
   </ul>
-  <div *ngFor="let post of posts">
+
     <table class="table">
       <thead class="thead-dark">
         <tr>
@@ -18,9 +17,9 @@
           <th scope="col">city</th>
         </tr>
       </thead>
-      <tbody *ngIf="(post.id != 3)">
-        <tr>
-          <th scope="row"> {{post.id}} </th>
+      <tbody *ngFor="let post of posts">
+        <tr   *ngIf="(post.id != 3)">
+          <th scope="col"> {{post.id}} </th>
           <td> {{post.name}} </td>
           <td> {{post.email}} </td>
           <td> {{post.phone}} </td>
@@ -28,6 +27,5 @@
         </tr>
       </tbody>
     </table>
-  </div>
 
-</body>
+
